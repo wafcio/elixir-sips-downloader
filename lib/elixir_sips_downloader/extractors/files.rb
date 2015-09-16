@@ -9,10 +9,14 @@ class ElixirSipsDownloader::Extractors::Files < ElixirSipsDownloader::Extractor
     item_description = Nokogiri::XML(item_description).to_xml
     document = REXML::Document.new item_description
     document.elements.each("/div[@class='blog-entry']/ul/li/a") do |element|
-      name = element.text
+      name = cleanse_file_name element.text
       link = element.attribute('href').to_s
       files << ElixirSipsDownloader::Downloadables::File.new(name, link)
     end
     files
+  end
+
+  def cleanse_file_name(name)
+    name
   end
 end
