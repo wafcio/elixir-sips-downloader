@@ -7,7 +7,7 @@ SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
 ]
 SimpleCov.start
 
-require_relative '../lib/ruby-tapas-downloader'
+require_relative '../lib/elixir-sips-downloader'
 
 RubyTapasDownloader.logger = Object.new.tap do |logger|
   def logger.method_missing(*)

@@ -1,3 +1,12 @@
+1.0.0
+
+* Forked from ruby-tapas-downloader to become elixir-sips-downloader
+* Changed namespaces and naming
+
+---
+
+LEGACY CHANGELOG FROM ruby-tapas-downloader (so you can see easily where it was forked from)
+
 2.0.3
 
 * Use https for rubygems.org (by @sebroeder)

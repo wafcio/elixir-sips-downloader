@@ -1,5 +1,0 @@
-#!/usr/bin/env ruby
-
-require_relative '../lib/ruby_tapas_downloader/cli'
-
-RubyTapasDownloader::CLI.start

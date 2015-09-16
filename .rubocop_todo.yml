@@ -14,5 +14,5 @@ Style/ClassAndModuleChildren:
 # Configuration parameters: Exclude.
 Style/FileName:
   Exclude:
-    - 'bin/ruby-tapas-downloader'
-    - 'lib/ruby-tapas-downloader.rb'
+    - 'bin/elixir-sips-downloader'
+    - 'lib/elixir-sips-downloader.rb'
