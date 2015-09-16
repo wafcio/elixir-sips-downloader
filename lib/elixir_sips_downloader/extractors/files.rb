@@ -6,7 +6,7 @@ class ElixirSipsDownloader::Extractors::Files < ElixirSipsDownloader::Extractor
   #   extracted from feed item description.
   def extract(item_description)
     files = Set.new
-    puts item_description.inspect
+    item_description = Nokogiri::XML(item_description).to_xml
     document = REXML::Document.new item_description
     document.elements.each("/div[@class='blog-entry']/ul/li/a") do |element|
       name = element.text
