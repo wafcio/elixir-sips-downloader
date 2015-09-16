@@ -1,6 +1,6 @@
 # The File resource of an Episode.
-class RubyTapasDownloader::Downloadables::File <
-                                              RubyTapasDownloader::Downloadable
+class ElixirSipsDownloader::Downloadables::File <
+                                              ElixirSipsDownloader::Downloadable
 
   # @return [String] the name of the File.
   attr_reader :name
@@ -15,16 +15,16 @@ class RubyTapasDownloader::Downloadables::File <
 
   # Download the File.
   #
-  # @param (see: RubyTapasDownloader::Downloadables::Catalog#download)
+  # @param (see: ElixirSipsDownloader::Downloadables::Catalog#download)
   def download(basepath, agent)
     FileUtils.mkdir_p basepath
 
     file_path = File.join(basepath, name)
     if File.exist? file_path
-      RubyTapasDownloader.logger.debug "Skipping downloaded file `#{ name }' " \
+      ElixirSipsDownloader.logger.debug "Skipping downloaded file `#{ name }' " \
         "in `#{ file_path }'..."
     else
-      RubyTapasDownloader.logger.info "Starting download of file `#{ name }' " \
+      ElixirSipsDownloader.logger.info "Starting download of file `#{ name }' " \
         "in `#{ file_path }'..."
       agent.download link, file_path
     end
