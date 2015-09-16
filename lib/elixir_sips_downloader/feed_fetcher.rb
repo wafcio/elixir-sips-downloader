@@ -24,6 +24,6 @@ class ElixirSipsDownloader::FeedFetcher
     feed_url = ElixirSipsDownloader::Config.urls[:feed]
 
     agent.add_auth feed_url, email, password
-    RSS::Parser.parse agent.get(feed_url).body
+    RSS::Parser.parse Nokogiri::HTML(agent.get(feed_url).body).to_html
   end
 end
