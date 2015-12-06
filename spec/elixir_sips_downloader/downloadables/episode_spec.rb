@@ -17,7 +17,7 @@ describe ElixirSipsDownloader::Downloadables::Episode do
     )
   end
 
-  let(:title)           { '999 Some: Ruby Tapas Episode with <<' }
+  let(:title)           { '999 - Some: Ruby Tapas Episode with <<' }
   let(:link)            { 'http://example.com' }
   let(:sanitized_title) { '999-some-ruby-tapas-episode-with-' }
 

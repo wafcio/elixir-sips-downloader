@@ -22,7 +22,7 @@ class ElixirSipsDownloader::Downloadables::Episode <
   #
   # @return [String] the sanitized title.
   def sanitized_title
-    @sanitized_title ||= title.gsub(/[\x00\/\\:\*\?\"<>\|]+/, '-')
+    @sanitized_title ||= title.gsub(/[\x00\/\\:\*\?\"<>\|]+/, '-').downcase.gsub(/[^\w<>#?!$]+/, '-')
   end
 
   # Download the Episode.
