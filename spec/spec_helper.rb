@@ -9,7 +9,7 @@ SimpleCov.start
 
 require_relative '../lib/elixir-sips-downloader'
 
-RubyTapasDownloader.logger = Object.new.tap do |logger|
+ElixirSipsDownloader.logger = Object.new.tap do |logger|
   def logger.method_missing(*)
   end
 end
